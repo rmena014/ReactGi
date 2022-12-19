@@ -1,4 +1,5 @@
 import React from "react";
+import BasicInfo from "./components/BasicInfo";
 
 class App extends React.Component {
   //EASY: CREATE CONSTRUCTOR
@@ -8,7 +9,7 @@ class App extends React.Component {
       people: [
         {
           name: "Richard Mena",
-          number: "646-973-6431",
+          number: "646-923-6211",
           dob: "01/14/2001",
         },
         {
@@ -32,19 +33,6 @@ class App extends React.Component {
         {this.state.people.map((person, index) => (
           <BasicInfo key={index} person={person} />
         ))}
-      </div>
-    );
-  }
-}
-
-class BasicInfo extends React.Component {
-  render() {
-    return (
-      //MEDIUM REPLACE HARDCODED WITH this.state.person
-      <div>
-        <p>Name: {this.props.person.name}</p>
-        <p>Number: {this.props.person.number}</p>
-        <p>Date of Birth: {this.props.person.dob}</p>
       </div>
     );
   }
